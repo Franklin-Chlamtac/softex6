@@ -1,0 +1,27 @@
+cadastrodenotas():
+    x = 0
+    maiornota = 0
+    maiornotaaluno = ()
+    aprovado = 0
+    turma = escreva('cadastrar notas dos alunos da turma:  ')
+    leia(turma)
+    enquanto x <25 faça:
+    	var nome = escreva('nome do aluno: ')
+    	leia(nome)
+    	var nota = escreva('nota do aluno: ')
+    	leia(nota)
+        se nota >= 7:
+            escreva('Aprovado!')
+            aprovado =+ 1
+            
+        se nota > maiornota:
+              maiornota = nota
+              maiornotaaluno = aluno 
+        
+     escreva(aprovado + 'Alunos foram aprovados! O aluno' + maiornotaaluno + 
+             'pontuou: ' + maiornota + 'A maior nota da turma' + turma)
+     return maiornota, maiornotaaluno, turma;
+
+            
+    
+   
