@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipo de carteira</title>
+</head>
+<body>
+    <div>
+        Quantidade de Rodas: <input id="rodas"><br />
+        Peso do Veículo: <input id="peso"><br />
+        Quantidade de passageiros: <input id="passageiros"><br />
+        <button onclick="carteira()">Enviar</button>
+    </div>
+    
+</body>
+<script>
+    function carteira(){
+        var rodas = parseInt(document.getElementById('rodas').value);
+        var peso = parseFloat(document.getElementById('peso').value);
+        var passageiros = parseInt(document.getElementById('passageiros').value);
+        
+        if (rodas <= 3 ) {
+            alert('Sua carteira de motorista será da classe: A.');
+        }
+        if (rodas >= 4){
+            if(passageiros > 8 && peso < 6000){
+                alert('Sua carteira de motorista será da classe: D.');
+            }else if(peso > 6000){
+                alert('Sua carteira de motorista será da classe: E.');
+            }else if(peso >3500 && peso <= 6000){
+                alert('Sua carteira de motorista será da classe: C.');
+            }else if(peso <=3500 && rodas ==4){
+                alert('Sua carteira de motorista será da classe: B.');
+            }else{
+                alert('VEICULO COM MUITAS RODAS E POUCO PESO, SEM CATEGORIA DEFINIDA!');
+            }
+            //Veiculos com mais de 4 rodas e menos de 3500 caem na categoria B, //
+            //apesar de serem apenas para veiculos com 4 rodas!//
+            
+            
+            
+            
+        }
+        
+        
+    }
+
+</script>
+</html>
