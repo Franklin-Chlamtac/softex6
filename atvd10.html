@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    Primeiro valor: <input type="number" id="valor1"> <br/>
+    Segundo valor: <input type="number" id="valor2">  <br/>
+    <input type="radio" name="op" id="soma" value="op1" checked> Adição <br/>
+    <input type="radio" name="op" id="subtração"> Subtração <br/>
+    <input type="radio" name="op" id="multiplicação"> Multiplicação <br/>
+    <input type="radio" name="op" id="divisão"> Divisão <br/>
+    <button onclick="calcular()" id="botão"> CALCULAR </button>
+    <div id="resultado"></div>
+
+</body>
+<script>
+    function calcular(){
+        var valor1 = parseFloat(document.getElementById('valor1').value);
+        var valor2 = parseFloat(document.getElementById('valor2').value);
+        var resultado = document.getElementById('resultado');
+        var res = "";
+
+        if(document.getElementById('soma').checked){
+            res = soma(valor1,valor2);
+        }
+        if(document.getElementById('subtração').checked){
+            res = subtracao(valor1,valor2);
+        }
+        if(document.getElementById('multiplicação').checked){
+            res = multi(valor1,valor2);
+        }
+        if(document.getElementById('divisão').checked){
+            res = divisao(valor1,valor2);
+        }
+        resultado.innerHTML = res;
+    }
+    function soma(x,y){
+        return (x+y);
+    }
+    function subtracao(x,y){
+        return (x-y);
+    }
+    function multi(x,y){
+        return (x*y);
+    }
+    function divisao(x,y){
+        if(y==0){
+            alert('ATENÇÃO, AO DIVIDIR UM NÚMERO POR 0 COISAS RUINS VÃO ACONTECER!')
+        }else{
+            return (x/y);
+        }
+        
+    }
+
+</script>
+</html>
