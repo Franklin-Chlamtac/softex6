@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+</head>
+<body>
+  Nome: <br />
+  <input type="text" id="nome" /><br />
+  Ano de Nascimento: <br />
+  <input type="number" id="idade" /><br />
+  <button onclick="cadastro()" id="botão">Cadastrar</button>
+  <script>
+      function cadastro(){
+          let nome = document.getElementById('nome').value;
+          let ano = parseInt(document.getElementById('idade').value);
+          let idade = (ano - 2022)*-1;
+          if(idade < 0 || idade >100){
+            alert('Data de nascimento inválida!')
+          }else{
+            alert(`Seu nome é ${nome} e sua idade é ${idade} anos!`)
+          }
+          
+         
+
+      }
+  </script>
+  
+</body>
+</html>
