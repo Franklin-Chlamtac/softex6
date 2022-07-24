@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna eletrônica</title>
+</head>
+<body>
+    Número do candidato:
+    <input type="number" id="nmr">
+    <button onclick="voto()">CONFIRMAR</button>
+    <div id="res">.</div>
+
+    
+</body>
+<script>
+    function rdm(min, max){
+        return Math.random() * (max - min) + min;
+
+
+    }
+    function voto(){
+        if(confirm('CONFIRMAR VOTO?')){
+            let voto = document.getElementById('nmr').value;
+       
+            let candx = {nome:'candx', nmr:889, votos:parseInt(rdm(0,100))};
+            let candy = {nome:'candy', nmr:847, votos:parseInt(rdm(0,100))};
+            let candz = {nome:'candz', nmr:515, votos:parseInt(rdm(0,100))};
+            let nulo = parseInt(rdm(0,100));
+            let anuncio = document.getElementById('res').value;
+            if(voto=889){
+                candx.votos +=1;
+            }else if(voto=847){
+                candy.votos +=1;
+            }else if(voto=515){
+                candz.votos +=1;
+            }else{
+                nulo +=1;
+            }
+            
+            
+            
+            if(candx.votos>candy.votos && candx.votos>candz.votos){
+                alert(`O VENCEDOR DA ELEIÇÃO É O CANDIDATO ${candx.nome} COM ${candx.votos} VOTOS!\n HOUVERAM ${nulo} VOTOS NULOS! \n O CANDIDATO ${candy.nome} OBTEVE ${candy.votos} !\n O CANDIDATO ${candz.nome} OBTEVE ${candz.votos} !\n FIM DA ELEIÇÃO.`)
+
+            }else if(candy.votos>candx.votos && candy.votos>candz.votos){
+                alert(`O VENCEDOR DA ELEIÇÃO É O CANDIDATO ${candy.nome} COM ${candy.votos} VOTOS!\n HOUVERAM ${nulo} VOTOS NULOS! \n O CANDIDATO ${candx.nome} OBTEVE ${candx.votos} !\n O CANDIDATO ${candz.nome} OBTEVE ${candz.votos} !\n FIM DA ELEIÇÃO.`)
+
+            }else{
+                alert(`O VENCEDOR DA ELEIÇÃO É O CANDIDATO ${candz.nome} COM ${candz.votos} VOTOS!\n HOUVERAM ${nulo} VOTOS NULOS! \n O CANDIDATO ${candx.nome} OBTEVE ${candx.votos} !\n O CANDIDATO ${candy.nome} OBTEVE ${candy.votos} !\n FIM DA ELEIÇÃO.`)
+            }
+        
+        }
+        
+    }
+
+    
+  
+</script>
+</html>
