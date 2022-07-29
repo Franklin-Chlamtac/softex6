@@ -1,0 +1,1 @@
+são exemplos do usos de grafos na tecnologia o cálculo de rotas mais otimizadas, como por exemplo um app de entregas e também modelagem de sistemas eletrônicos.
