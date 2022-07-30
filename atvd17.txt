@@ -1,0 +1,3 @@
+Criaria uma classe que receberia os numeros e as ''letras'' do numero imaginario.
+ após isso, criaria uma função que pegaria os números, e após realizar as operações matématicas,
+ concatenaria os resultados com as ''letras'' do número imaginario.
