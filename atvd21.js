@@ -1,6 +1,6 @@
 class Carro {
     constructor(modelo) {
-      this._modelo = modelo;;
+      this._modelo = modelo;
     }
   
     set modelo(string) {
