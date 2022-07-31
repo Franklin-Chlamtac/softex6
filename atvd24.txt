@@ -1,0 +1,2 @@
+São soluções para problemas que acontecem com frequência em códigos.
+Um dos padrões é o estrutural, que aumenta a funcionalidade das classes sem alterar sua composição.
